@@ -1,10 +1,12 @@
 import React, {useState} from "react";
 import Question from "./Question";
 import Timer from "./Timer";
+import Score from "./Score";
 
 function Game({questions}){
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [time, setTime] = useState(30);
+    const [score, setScore] = useState(0);
 
     function handleNextQ(){
         const nextQ = currentQuestion+1;
@@ -17,12 +19,19 @@ function Game({questions}){
             setTime(30)};
     };
 
+    function getPoints(){
+        const questionPoints = time * 100;
+        const updatedScore = score + questionPoints;
+        setScore(updatedScore);
+    }
+
     if(time === 0) handleNextQ();
 
     return(
         <div>
-          <Question question={questions[currentQuestion]} handleAnswered={handleNextQ} /> 
-          <Timer time={time} timeSetter={setTime} /> 
+            <Score score={score} />
+            <Timer time={time} timeSetter={setTime} />
+            <Question question={questions[currentQuestion]} handleAnswered={handleNextQ} handleCorrect={getPoints} />   
         </div>
         
     )

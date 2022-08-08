@@ -1,14 +1,18 @@
 import React from "react";
 
-function Question({question, handleAnswered}) {
+function Question({question, handleAnswered, handleCorrect}) {
     const {questionText, correct, answers} = question;
     function handleClick(selectedAnswer){
         if(selectedAnswer === correct){
             console.log('Correct')
+            handleCorrect();
+            handleAnswered();
         }
-        else console.log('Wrong')
-        handleAnswered();
-    }
+        else {
+            console.log('Wrong')
+            handleAnswered();
+        }
+    };
 
     return(
         <div>
