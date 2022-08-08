@@ -1,13 +1,13 @@
 import React from "react";
 
-function Question({question}) {
+function Question({question, handleAnswered}) {
     const {questionText, correct, answers} = question;
     function handleClick(selectedAnswer){
         if( parseInt(selectedAnswer) === correct){
             console.log('Correct')
         }
         else console.log('Wrong')
-
+        handleAnswered();
     }
 
     return(

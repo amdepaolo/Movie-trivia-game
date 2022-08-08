@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import Question from "./Question";
+import Game from "./Game";
 import NewQuestionForm from "./NewQuestionForm";
 
 const testQuestion = {
@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div>
-      <Question question={questions[0]}/>
+      <Game questions={questions} />
       <NewQuestionForm />
     </div>
   )
