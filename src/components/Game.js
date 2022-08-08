@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import Question from "./Question";
 import Timer from "./Timer";
 import Score from "./Score";
+import GameEnd from "./GameEnd";
 
 function Game({questions}){
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -10,24 +11,30 @@ function Game({questions}){
 
     function handleNextQ(){
         const nextQ = currentQuestion+1;
-        if (nextQ >= questions.length){
-            setCurrentQuestion(0)
-            setTime(30);
-        }
-        else {
             setCurrentQuestion(nextQ)
-            setTime(30)};
+            setTime(30)
     };
 
     function getPoints(){
         const questionPoints = time * 100;
         const updatedScore = score + questionPoints;
         setScore(updatedScore);
+    };
+
+    function restart(){
+        setCurrentQuestion(0);
+        setTime(30);
+        setScore(0);
     }
 
-    if(time === 0) handleNextQ();
+    if(time < 0) handleNextQ();
+    if(currentQuestion >= questions.length){
+        return(
+            <GameEnd score={score} restartClick={restart} />
+        )
+    }
 
-    return(
+    else return(
         <div>
             <Score score={score} />
             <Timer time={time} timeSetter={setTime} />

@@ -2,18 +2,9 @@ import {useEffect, useState} from "react";
 import Game from "./Game";
 import NewQuestionForm from "./NewQuestionForm";
 
-const testQuestion = {
-  id: 1,
-  questionText: "In the 'Back To the Future' trilogy, at what speed does the DeLorean need to be going to travel through time",
-  answers : {
-      1: "100 mph",
-      2: "55 mph",
-      3: "88 mph",
-      4: "1000 mph" },
-  correct: 3  }
 
 function App() {
-  const [questions, setQuestions] = useState([testQuestion]);
+  const [questions, setQuestions] = useState([]);
   useEffect(()=>{
     fetch('http://localhost:4000/questions')
     .then(r => r.json())
@@ -22,6 +13,7 @@ function App() {
 
   return (
     <div>
+      <h1> Movie Trivia Game </h1>
       <Game questions={questions} />
       <NewQuestionForm />
     </div>
