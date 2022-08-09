@@ -32,6 +32,17 @@
       },
       "correct": "2",
       "id": 3
+    },
+    {
+      "questionText": "Complete the quote from 'Mean Girls': \"On Wednesdays, we ______ \"",
+      "answers": {
+        "1": "eat light.",
+        "2": "wear hoop earrings.",
+        "3": "do mean things, because we are very mean girls. Hence, the title for the film you are currently watching!",
+        "4": "wear pink."
+      },
+      "correct": "4",
+      "id": 4
     }
   ],
   "players": []

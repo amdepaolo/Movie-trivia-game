@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import {Route} from "react-router-dom";
 import Game from "./Game";
 import NewQuestionForm from "./NewQuestionForm";
 
@@ -14,8 +15,13 @@ function App() {
   return (
     <div>
       <h1> Movie Trivia Game </h1>
-      <Game questions={questions} />
-      <NewQuestionForm />
+      <Route exact path='/'>
+        <h2>home page placeholder</h2>
+        <NewQuestionForm />
+      </Route>
+      <Route path='/game'>
+        <Game questions={questions} />
+      </Route>
     </div>
   )
 }
