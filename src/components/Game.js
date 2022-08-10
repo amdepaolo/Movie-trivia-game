@@ -30,7 +30,9 @@ function Game({questions}){
     if(time < 0) handleNextQ();
     if(currentQuestion >= questions.length){
         return(
-            <GameEnd score={score} restartClick={restart} />
+            <div>
+                <GameEnd score={score} restartClick={restart} />
+            </div> 
         )
     }
 

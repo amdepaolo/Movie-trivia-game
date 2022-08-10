@@ -1,17 +1,17 @@
 import React from "react";
 
 function NewQuestionForm(){
-    function handleSubmit(event){
-        event.preventDefault();
+    function handleSubmit(e){
+        e.preventDefault();
         const formObject = {
-            questionText: event.target.questionText.value,
+            questionText: e.target.questionText.value,
             answers: {
-                1: event.target.answer1.value,
-                2: event.target.answer2.value,
-                3: event.target.answer3.value,
-                4: event.target.answer4.value
+                1: e.target.answer1.value,
+                2: e.target.answer2.value,
+                3: e.target.answer3.value,
+                4: e.target.answer4.value
             },
-            correct: event.target.correctAnswer.value
+            correct: e.target.correctAnswer.value
         };
         console.log(formObject);
         fetch('http://localhost:4000/questions', {
@@ -26,12 +26,12 @@ function NewQuestionForm(){
     return(
         <form onSubmit={handleSubmit}>
             <label>Question</label>
-            <input type='text' name='questionText'></input>
+            <input type='text' name='questionText'/>
             <label>answers:</label>
-            <input type='text' name="answer1"></input>
-            <input type='text' name="answer2"></input>
-            <input type='text' name="answer3"></input>
-            <input type='text' name="answer4"></input>
+            <input type='text' name="answer1"/>
+            <input type='text' name="answer2"/>
+            <input type='text' name="answer3"/>
+            <input type='text' name="answer4"/>
             <label>correct answer?</label>
             <select name="correctAnswer">
                 <option value={1}>answer 1</option>

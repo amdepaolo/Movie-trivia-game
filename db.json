@@ -23,7 +23,7 @@
       "id": 2
     },
     {
-      "questionText": "What national monument do Cary Grant and Eva Marie Saint find themselves nearly falling off of in the 'North by Northwest'?",
+      "questionText": "What national monument do Cary Grant and Eva Marie Saint find themselves nearly falling off of in 'North by Northwest'?",
       "answers": {
         "1": "The Statue of Liberty",
         "2": "Mount Rushmore",
@@ -34,15 +34,37 @@
       "id": 3
     },
     {
-      "questionText": "Complete the quote from 'Mean Girls': \"On Wednesdays, we ______ \"",
+      "questionText": "Complete the quote from 'Mean Girls': \"On Wednesdays, ______ \"",
       "answers": {
-        "1": "eat light.",
-        "2": "wear hoop earrings.",
-        "3": "do mean things, because we are very mean girls. Hence, the title for the film you are currently watching!",
-        "4": "wear pink."
+        "1": "We eat light.",
+        "2": "We wear hoop earrings.",
+        "3": "We do mean things, because we are very mean girls. Hence, the title for the film you are currently watching!",
+        "4": "We wear pink."
       },
       "correct": "4",
       "id": 4
+    },
+    {
+      "questionText": "From the movie 'Gremlins' Which is NOT one of the rules for taking care of a Mogwai? ",
+      "answers": {
+        "1": "Don't feed them after midnight",
+        "2": "Don't get them wet",
+        "3": "Don't pull on their tail",
+        "4": "Don't expose them to bright light."
+      },
+      "correct": "3",
+      "id": 5
+    },
+    {
+      "questionText": "What is the name of Charles Foster Kane's mansion in 'Citizen Kane'?",
+      "answers": {
+        "1": "Xanadu",
+        "2": "Rosebud",
+        "3": "Babylon",
+        "4": "The Kane Cave"
+      },
+      "correct": "1",
+      "id": 6
     }
   ],
   "players": []

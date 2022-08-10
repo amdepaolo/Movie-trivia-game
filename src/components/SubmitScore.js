@@ -1,35 +1,38 @@
-import React from "react";
+import React, {useState} from "react";
 
 function SubmitScore({score}){
-    function handleSubmit(e){
-        e.preventDefault();
-        const scoreObject = {
-            name: e.target.name.value,
-            message: e.target.message.value,
-            score: score
-        };
-        fetch('http://localhost:4000/players', {
-            method: 'POST',
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(scoreObject)
-          })
-          .then(r => r.json())
-          .then(r => console.log(r))
-    }
+    const [scoreObject, setScoreObject] = useState({score: score, name: '', message: ''})
 
-    return(
-        <div>
-            <h3>Submit Your Score?</h3>
-            <form onSubmit={handleSubmit}>
-                <label>Name:</label>
-                <input type='text'name="name"></input>
-                <label>Message:</label>
-                <input type='text' name="message"></input>
-                <p>Final Score: {score}</p>
-                <input type='submit'>Add Score</input>
-            </form>
-        </div>
+    function updateScoreObject(key, value){
+        if (key === 'name'){
+            const updatedScoreObject = {...scoreObject, name: value};
+            setScoreObject(updatedScoreObject);
+            console.log(scoreObject);
+        }
+        else {
+            const updatedScoreObject = {...scoreObject, message: value};
+            setScoreObject(updatedScoreObject);
+            console.log(scoreObject);
+        }
+    }
+    
+    return(     
+        <form onSubmit={e => console.log(e.target.value)}>
+            <input
+                value={scoreObject.name}
+                onChange={e => updateScoreObject('name', e.target.value)} 
+                type='text'
+                placeholder="Name"
+            />
+            <input 
+                value={scoreObject.message} 
+                onChange={e => updateScoreObject('message', e.target.value)} 
+                type='text'
+                placeholder="Message"
+            />
+            <input type='submit' value='Submit Score'/>
+        </form>
     )
-}
+};
 
 export default SubmitScore;

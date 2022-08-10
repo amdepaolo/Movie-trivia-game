@@ -18,6 +18,8 @@ function App() {
       <h1> Movie Trivia Game </h1>
       <Route exact path='/'>
         <h2>home page placeholder</h2>
+        <a href="http://localhost:3000/game">Start Game</a>
+        <a href="http://localhost:3000/leaderboard">Leaderboard</a>
         <NewQuestionForm />
       </Route>
       <Route path='/game'>

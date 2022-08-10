@@ -9,15 +9,26 @@ function Leaderboard(){
         .then(setPlayers)
       }, []);
 
+    console.log(players)
+
     return(
         <table>
-            <tr>
-                <thead>Rank</thead>
-                <thead>Name</thead>
-                <thead>Message</thead>
-                <thead>Score</thead>
-            </tr>
-
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Message</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>A</td>
+                    <td>Hello World</td>
+                    <td>a billion</td>
+                </tr>
+            </tbody>
         </table>
     )
 }
