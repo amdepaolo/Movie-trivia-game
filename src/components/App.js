@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import {Route} from "react-router-dom";
 import Game from "./Game";
 import NewQuestionForm from "./NewQuestionForm";
+import Leaderboard from "./Leaderboard";
 
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
       </Route>
       <Route path='/game'>
         <Game questions={questions} />
+      </Route>
+      <Route path='/leaderboard'>
+        <Leaderboard />
       </Route>
     </div>
   )
