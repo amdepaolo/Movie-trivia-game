@@ -15,9 +15,20 @@ function SubmitScore({score}){
             console.log(scoreObject);
         }
     }
+
+    function handleSubmit(e){
+        e.preventDefault();
+        fetch('http://localhost:4000/players', {
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(scoreObject)
+          })
+          .then(r => r.json())
+          .then(r => console.log(r))
+    }
     
     return(     
-        <form onSubmit={e => console.log(e.target.value)}>
+        <form onSubmit={handleSubmit}>
             <input
                 value={scoreObject.name}
                 onChange={e => updateScoreObject('name', e.target.value)} 

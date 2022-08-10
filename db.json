@@ -67,5 +67,12 @@
       "id": 6
     }
   ],
-  "players": []
+  "players": [
+    {
+      "score": 0,
+      "name": "Test",
+      "message": "Test",
+      "id": 1
+    }
+  ]
 }
