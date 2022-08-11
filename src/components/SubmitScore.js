@@ -24,7 +24,7 @@ function SubmitScore({score}){
             body: JSON.stringify(scoreObject)
           })
           .then(r => r.json())
-          .then(r => console.log(r))
+          .then(()=> window.location.href='http://localhost:3000/leaderboard')
     }
     
     return(     

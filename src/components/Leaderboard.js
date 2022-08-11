@@ -1,15 +1,15 @@
 import React, {useEffect, useState} from "react";
 import LeaderboardRow from "./LeaderboardRow";
 
-const testObj = [{
+const placeholderObj = [{
     score: 0,
-    name: "Test",
-    message: "Test",
+    name: "Loading",
+    message: "Loading",
     id: 1
-  }]
+  }];
 
 function Leaderboard(){
-    const [players, setPlayers] = useState(testObj);
+    const [players, setPlayers] = useState(placeholderObj);
     const tableContents = players.map(obj => <LeaderboardRow obj={obj} key={obj.id}/>); 
 
     useEffect(()=>{

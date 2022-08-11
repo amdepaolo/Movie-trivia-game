@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {Route} from "react-router-dom";
+import {Route, Link} from "react-router-dom";
 import Game from "./Game";
 import NewQuestionForm from "./NewQuestionForm";
 import Leaderboard from "./Leaderboard";
@@ -19,7 +19,9 @@ function App() {
       <NavBar />
       <h1> Movie Trivia Game </h1>
       <Route exact path='/'>
-        <h2>home page placeholder</h2>
+        <h2>Test Your Knowledge!</h2>
+        <p>Welcome to the game! You will get a number of multiple choice trivia questions covering a variety of movies. You get 30 seconds to answer each question. The quicker you answer, the more points you get! The highest scores will make it onto the leaderboard. Whenver your ready, hit the start button below. Good Luck!</p>
+        <button><Link to='/game'>START</Link></button>
       </Route>
       <Route path='/game'>
         <Game questions={questions} />

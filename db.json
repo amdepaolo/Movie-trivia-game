@@ -65,6 +65,50 @@
       },
       "correct": "1",
       "id": 6
+    },
+    {
+      "questionText": "Which of these Disney Films was nominated for the Academy Award for Best Picture?",
+      "answers": {
+        "1": "Snow White and the Seven Dwarfs",
+        "2": "Fantasia",
+        "3": "The Little Mermaid",
+        "4": "Beauty and the Beast"
+      },
+      "correct": "4",
+      "id": 7
+    },
+    {
+      "questionText": "Which of these Meg Ryan Romantic Comedies does not co-star Tom Hanks? ",
+      "answers": {
+        "1": "Joe Versus the Volcano",
+        "2": "When Harry Met Sally",
+        "3": "You've Got Mail",
+        "4": "Sleepless in Seattle"
+      },
+      "correct": "2",
+      "id": 8
+    },
+    {
+      "questionText": " Which Band provided the soundtrack for the cult classic film, 'Highlander'?",
+      "answers": {
+        "1": "Rush",
+        "2": "The Who",
+        "3": "Queen",
+        "4": "Iron Maiden"
+      },
+      "correct": "3",
+      "id": 9
+    },
+    {
+      "questionText": "'The Sound of Music' director Robert Wise also directed which '50s Sci-fi classic?",
+      "answers": {
+        "1": "The Day the Earth Stood Still",
+        "2": "Invasion of the Body Snatchers",
+        "3": "Forbidden Planet",
+        "4": "The Sound of Music but with Robots and Aliens"
+      },
+      "correct": "1",
+      "id": 10
     }
   ],
   "players": [
@@ -79,6 +123,18 @@
       "name": "Adam",
       "message": "Movies are fun",
       "id": 2
+    },
+    {
+      "score": 15100,
+      "name": "AMD",
+      "message": "Fun game!",
+      "id": 3
+    },
+    {
+      "score": 11700,
+      "name": "Marty",
+      "message": "Heavy Quiz, Doc!",
+      "id": 4
     }
   ]
 }
