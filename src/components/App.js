@@ -3,6 +3,7 @@ import {Route} from "react-router-dom";
 import Game from "./Game";
 import NewQuestionForm from "./NewQuestionForm";
 import Leaderboard from "./Leaderboard";
+import NavBar from "./NavBar";
 
 
 function App() {
@@ -15,18 +16,19 @@ function App() {
 
   return (
     <div>
+      <NavBar />
       <h1> Movie Trivia Game </h1>
       <Route exact path='/'>
         <h2>home page placeholder</h2>
-        <a href="http://localhost:3000/game">Start Game</a>
-        <a href="http://localhost:3000/leaderboard">Leaderboard</a>
-        <NewQuestionForm />
       </Route>
       <Route path='/game'>
         <Game questions={questions} />
       </Route>
       <Route path='/leaderboard'>
         <Leaderboard />
+      </Route>
+      <Route path='/edit'>
+        <NewQuestionForm />
       </Route>
     </div>
   )

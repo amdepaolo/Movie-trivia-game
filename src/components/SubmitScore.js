@@ -29,6 +29,7 @@ function SubmitScore({score}){
     
     return(     
         <form onSubmit={handleSubmit}>
+            <h4>Submit your score?</h4>
             <input
                 value={scoreObject.name}
                 onChange={e => updateScoreObject('name', e.target.value)} 
