@@ -1,14 +1,21 @@
 import React, {useEffect, useState} from "react";
 import LeaderboardRow from "./LeaderboardRow";
 
+const testObj = [{
+    score: 0,
+    name: "Test",
+    message: "Test",
+    id: 1
+  }]
+
 function Leaderboard(){
-    const [players, setPlayers] = useState([]);
-    const tableContents = topTen.map(obj => <LeaderboardRow obj={obj}/>); 
+    const [players, setPlayers] = useState(testObj);
+    const tableContents = players.map(obj => <LeaderboardRow obj={obj} key={obj.id}/>); 
 
     useEffect(()=>{
         fetch('http://localhost:4000/players')
         .then(r => r.json())
-        .then(setPlayers)
+        .then(sortScores)
       }, []);
 
     console.log(players)
@@ -24,13 +31,14 @@ function Leaderboard(){
                     highestIndex = i;
                 }
             }
-            sortedScores.push(highestScore);
+            sortedScores.push({...highestScore, rank: i+1});
             arr.splice(highestIndex, 1)      
         }
-        return sortedScores;
+        debugger
+        setPlayers(sortedScores);
     };
 
-    const topTen = sortScores(players);
+    
 
 
     return(

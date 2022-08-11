@@ -73,6 +73,12 @@
       "name": "Test",
       "message": "Test",
       "id": 1
+    },
+    {
+      "score": 15400,
+      "name": "Adam",
+      "message": "Movies are fun",
+      "id": 2
     }
   ]
 }

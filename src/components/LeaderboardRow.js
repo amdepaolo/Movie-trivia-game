@@ -1,11 +1,11 @@
 import React from "react";
 
 function LeaderboardRow({obj}){
-    const {name, message, score} = obj;
+    const {name, message, score, rank} = obj;
 
     return(
         <tr>
-            <td></td>
+            <td>{rank}</td>
             <td>{name}</td>
             <td>{message}</td>
             <td>{score}</td>
