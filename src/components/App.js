@@ -21,7 +21,7 @@ function App() {
       <Route exact path='/'>
         <h2>Test Your Knowledge!</h2>
         <p>Welcome to the game! You will get a number of multiple choice trivia questions covering a variety of movies. You get 30 seconds to answer each question. The quicker you answer, the more points you get! The highest scores will make it onto the leaderboard. Whenver your ready, hit the start button below. Good Luck!</p>
-        <button><Link to='/game'>START</Link></button>
+        <Link to='/game'><button>START</button></Link>
       </Route>
       <Route path='/game'>
         <Game questions={questions} />
