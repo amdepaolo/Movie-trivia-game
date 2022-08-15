@@ -3,7 +3,8 @@ import React from "react";
 function Question({question, handleAnswered, handleCorrect}) {
     const {questionText, correct, answers} = question;
     function handleClick(selectedAnswer){
-        if(selectedAnswer === correct){
+        const answerValue = selectedAnswer.target.value;
+        if(answerValue === correct){
             console.log('Correct')
             handleCorrect();
             handleAnswered();
@@ -17,10 +18,10 @@ function Question({question, handleAnswered, handleCorrect}) {
     return(
         <div>
             <h3>{questionText}</h3>
-            <button onClick={e => handleClick(e.target.value)} value={1}>{answers[1]}</button>
-            <button onClick={e => handleClick(e.target.value)} value={2}>{answers[2]}</button>
-            <button onClick={e => handleClick(e.target.value)} value={3}>{answers[3]}</button>
-            <button onClick={e => handleClick(e.target.value)} value={4}>{answers[4]}</button>
+            <button onClick={handleClick} value={1}>{answers[1]}</button>
+            <button onClick={handleClick} value={2}>{answers[2]}</button>
+            <button onClick={handleClick} value={3}>{answers[3]}</button>
+            <button onClick={handleClick} value={4}>{answers[4]}</button>
         </div>
     )
 }

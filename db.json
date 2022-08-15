@@ -141,6 +141,12 @@
       "name": "Baby",
       "message": "These questions nearly had me in a corner",
       "id": 5
+    },
+    {
+      "score": 12100,
+      "name": "Bruce",
+      "message": "I smashed it!",
+      "id": 6
     }
   ]
 }
