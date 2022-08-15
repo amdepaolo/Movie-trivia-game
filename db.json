@@ -135,6 +135,12 @@
       "name": "Marty",
       "message": "Heavy Quiz, Doc!",
       "id": 4
+    },
+    {
+      "score": 16400,
+      "name": "Baby",
+      "message": "These questions nearly had me in a corner",
+      "id": 5
     }
   ]
 }
