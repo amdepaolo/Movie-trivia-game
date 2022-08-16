@@ -27,6 +27,7 @@ function App() {
         <Game questions={questions} />
       </Route>
       <Route path='/leaderboard'>
+        <h2>Hall of Fame</h2>
         <Leaderboard />
       </Route>
       <Route path='/edit'>
