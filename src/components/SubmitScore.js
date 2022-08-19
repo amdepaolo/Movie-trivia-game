@@ -4,16 +4,9 @@ function SubmitScore({score}){
     const [scoreObject, setScoreObject] = useState({score: score, name: '', message: ''})
 
     function updateScoreObject(key, value){
-        if (key === 'name'){
-            const updatedScoreObject = {...scoreObject, name: value};
-            setScoreObject(updatedScoreObject);
-            console.log(scoreObject);
-        }
-        else {
-            const updatedScoreObject = {...scoreObject, message: value};
-            setScoreObject(updatedScoreObject);
-            console.log(scoreObject);
-        }
+        const updatedScoreObject = {...scoreObject, [key]: value};
+        setScoreObject(updatedScoreObject);
+        console.log(scoreObject);     
     }
 
     function handleSubmit(e){

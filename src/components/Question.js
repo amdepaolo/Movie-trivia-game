@@ -3,14 +3,11 @@ import React from "react";
 function Question({question, handleAnswered, handleCorrect}) {
     const {questionText, correct, answers} = question;
     function handleClick(selectedAnswer){
-        const answerValue = selectedAnswer.target.value;
-        if(answerValue === correct){
-            console.log('Correct')
+        if(selectedAnswer.target.value === correct){
             handleCorrect();
             handleAnswered();
         }
         else {
-            console.log('Wrong')
             handleAnswered();
         }
     };

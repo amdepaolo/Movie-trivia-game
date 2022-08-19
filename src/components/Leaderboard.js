@@ -34,7 +34,6 @@ function Leaderboard(){
             sortedScores.push({...highestScore, rank: i+1});
             arr.splice(highestIndex, 1)      
         }
-        debugger
         setPlayers(sortedScores);
     };
 
