@@ -20,14 +20,15 @@ function NewQuestionForm(){
             body: JSON.stringify(formObject)
           })
           .then(r => r.json())
-          .then(r => console.log(r))
+          .then(r => console.log(r));
+        e.target.reset();
     }
 
     return(
         <form onSubmit={handleSubmit}>
             <label>Question</label>
             <input type='text' name='questionText'/>
-            <label>answers:</label>
+            <label>Answers:</label>
             <input type='text' name="answer1"/>
             <input type='text' name="answer2"/>
             <input type='text' name="answer3"/>

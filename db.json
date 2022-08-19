@@ -12,7 +12,7 @@
       "id": 1
     },
     {
-      "questionText": "Which is the James Bond film that features the classic line, 'No Mr. Bond, I expect you to die' ? ",
+      "questionText": "Which is the James Bond film that features the classic line, \"No Mr. Bond, I expect you to die\" ? ",
       "answers": {
         "1": "Goldfinger",
         "2": "From Russia With Love",
@@ -38,7 +38,7 @@
       "answers": {
         "1": "We eat light.",
         "2": "We wear hoop earrings.",
-        "3": "We do mean things, because we are very mean girls. Hence, the title for the film you are currently watching!",
+        "3": "We go on dates",
         "4": "We wear pink."
       },
       "correct": "4",
@@ -105,48 +105,98 @@
         "1": "The Day the Earth Stood Still",
         "2": "Invasion of the Body Snatchers",
         "3": "Forbidden Planet",
-        "4": "The Sound of Music but with Robots and Aliens"
+        "4": "Plan 9 From Outer Space"
       },
       "correct": "1",
       "id": 10
+    },
+    {
+      "questionText": "Which NBA Superstar also appears as a pilot in the disaster film spoof, 'Airplane!'?",
+      "answers": {
+        "1": "Wilt Chamberlain",
+        "2": "Earvin 'Magic' Johnson",
+        "3": "Larry Bird",
+        "4": "Kareem Abdul-Jabbar"
+      },
+      "correct": "4",
+      "id": 11
+    },
+    {
+      "questionText": "Which of these Superheroes is not part of the team in the original 2012 film, 'The Avengers'?",
+      "answers": {
+        "1": "Iron Man",
+        "2": "Spider-man",
+        "3": "Thor",
+        "4": "Captain America"
+      },
+      "correct": "2",
+      "id": 12
+    },
+    {
+      "questionText": "The 1995 teen movie 'Clueless' is an updated adaptation of which Jane Austen novel? ",
+      "answers": {
+        "1": "Emma",
+        "2": "Persuasion",
+        "3": "Pride and Prejudice",
+        "4": "Sense and Sensibility"
+      },
+      "correct": "1",
+      "id": 13
+    },
+    {
+      "questionText": "Who plays the Monster in 1931's 'Frankenstein'? ",
+      "answers": {
+        "1": "Bela Lugosi",
+        "2": "Lon Chaney",
+        "3": "Boris Karloff",
+        "4": "Colin Clive"
+      },
+      "correct": "3",
+      "id": 14
     }
   ],
   "players": [
     {
-      "score": 0,
-      "name": "Test",
-      "message": "Test",
-      "id": 1
-    },
-    {
       "score": 15400,
       "name": "Adam",
       "message": "Movies are fun",
-      "id": 2
+      "id": 1
     },
     {
       "score": 15100,
       "name": "AMD",
       "message": "Fun game!",
-      "id": 3
+      "id": 2
     },
     {
       "score": 11700,
       "name": "Marty",
       "message": "Heavy Quiz, Doc!",
-      "id": 4
+      "id": 3
     },
     {
       "score": 16400,
       "name": "Baby",
       "message": "These questions nearly had me in a corner",
-      "id": 5
+      "id": 4
     },
     {
       "score": 12100,
       "name": "Bruce",
       "message": "I smashed it!",
+      "id": 5
+    },
+    {
+      "score": 19600,
+      "name": "Andy",
+      "message": "Get busy quizzing, or get busy losing",
       "id": 6
+    },
+    {
+      "score": 14300,
+      "name": "Eliza",
+      "message": "I think I got it right!",
+      "id": 7
     }
   ]
 }

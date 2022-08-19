@@ -14,7 +14,7 @@ function NavBar(){
                 Leaderboard
             </NavLink>
             <NavLink to='/edit'>
-                Quizmasters 
+                Quizmaster
             </NavLink>
         </div>
     )

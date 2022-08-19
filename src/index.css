@@ -9,6 +9,7 @@ h1, h2, h3{
   margin: 1rem, auto;
   padding: 1rem;
   width: 65%;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 p{
