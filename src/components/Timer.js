@@ -14,8 +14,10 @@ function Timer({time, timeSetter}){
         }
     })
 
+    const urgency = time < 10? {color:'red'} : {color:'black'};
+
     return(
-        <h4>Time Remaining: {time}</h4>
+        <h4 style={urgency}>Time Remaining: {time}</h4>
     )
 }
 
