@@ -29,6 +29,7 @@ function App() {
       <Route path='/leaderboard'>
         <h2>Hall of Fame</h2>
         <Leaderboard />
+        <Link to='/'><button>HOME</button></Link>
       </Route>
       {/* <Route path='/edit'>
         <NewQuestionForm />

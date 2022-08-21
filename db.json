@@ -89,7 +89,7 @@
       "id": 8
     },
     {
-      "questionText": " Which Band provided the soundtrack for the cult classic film, 'Highlander'?",
+      "questionText": " Which rock band provided the soundtrack for the cult classic film, 'Highlander'?",
       "answers": {
         "1": "Rush",
         "2": "The Who",
@@ -111,7 +111,7 @@
       "id": 10
     },
     {
-      "questionText": "Which NBA Superstar also appears as a pilot in the disaster film spoof, 'Airplane!'?",
+      "questionText": "Which NBA Superstar appears as a pilot in the disaster film spoof, 'Airplane!'?",
       "answers": {
         "1": "Wilt Chamberlain",
         "2": "Earvin 'Magic' Johnson",
@@ -122,7 +122,7 @@
       "id": 11
     },
     {
-      "questionText": "Which of these Superheroes is not part of the team in the original 2012 film, 'The Avengers'?",
+      "questionText": "Which of these Superheroes is NOT part of the team in the first of the 'Avengers' films?",
       "answers": {
         "1": "Iron Man",
         "2": "Spider-man",
@@ -153,6 +153,17 @@
       },
       "correct": "3",
       "id": 14
+    },
+    {
+      "questionText": "Al Pacino plays which member of the Corleone family in 'The Godfather' films?",
+      "answers": {
+        "1": "Vito",
+        "2": "Michael",
+        "3": "Sonny",
+        "4": "Fredo"
+      },
+      "correct": "2",
+      "id": 15
     }
   ],
   "players": [
@@ -170,7 +181,7 @@
     },
     {
       "score": 11700,
-      "name": "Marty",
+      "name": "Marty M.",
       "message": "Heavy Quiz, Doc!",
       "id": 3
     },
@@ -182,21 +193,39 @@
     },
     {
       "score": 12100,
-      "name": "Bruce",
+      "name": "Bruce B.",
       "message": "I smashed it!",
       "id": 5
     },
     {
       "score": 19600,
-      "name": "Andy",
-      "message": "Get busy quizzing, or get busy losing",
+      "name": "Andy D.",
+      "message": "Get busy quizzing, or get busy trying",
       "id": 6
     },
     {
       "score": 14300,
-      "name": "Eliza",
-      "message": "I think I got it right!",
+      "name": "Eliza D.",
+      "message": "I think I got it!",
       "id": 7
+    },
+    {
+      "score": 11800,
+      "name": "Jason V.",
+      "message": "...",
+      "id": 8
+    },
+    {
+      "score": 17300,
+      "name": "Ron B.",
+      "message": "You stay classy, folks!",
+      "id": 9
+    },
+    {
+      "score": 12000,
+      "name": "Harry C.",
+      "message": "Made my day",
+      "id": 10
     }
   ]
 }
