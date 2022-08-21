@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {Route, Link} from "react-router-dom";
 import Game from "./Game";
-import NewQuestionForm from "./NewQuestionForm";
+// import NewQuestionForm from "./NewQuestionForm";
 import Leaderboard from "./Leaderboard";
 import NavBar from "./NavBar";
 
@@ -30,9 +30,9 @@ function App() {
         <h2>Hall of Fame</h2>
         <Leaderboard />
       </Route>
-      <Route path='/edit'>
+      {/* <Route path='/edit'>
         <NewQuestionForm />
-      </Route>
+      </Route> */}
     </div>
   )
 }

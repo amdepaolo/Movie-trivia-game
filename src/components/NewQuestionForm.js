@@ -13,7 +13,6 @@ function NewQuestionForm(){
             },
             correct: e.target.correctAnswer.value
         };
-        console.log(formObject);
         fetch('http://localhost:4000/questions', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
