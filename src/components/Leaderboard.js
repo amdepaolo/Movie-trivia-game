@@ -18,8 +18,6 @@ function Leaderboard(){
         .then(sortScores)
       }, []);
 
-    console.log(players)
-
     function sortScores(arr){
         const sortedScores = []
         for (let i = 0; i < 10; i++){
@@ -36,9 +34,6 @@ function Leaderboard(){
         }
         setPlayers(sortedScores);
     };
-
-    
-
 
     return(
         <table>

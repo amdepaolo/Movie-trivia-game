@@ -8,9 +8,21 @@ import NavBar from "./NavBar";
 
 function App() {
   const [questions, setQuestions] = useState([]);
+
+  function randomizer(array){
+    const randomizedArray = [array[0], array[1]];
+    for(let i = 2; i < array.length; i++){
+      randomizedArray.splice(Math.round(Math.random()*1000)%randomizedArray.length, 0, array[i]);
+      randomizedArray.reverse();
+    }
+    console.log(randomizedArray)
+    return randomizedArray
+  };
+
   useEffect(()=>{
     fetch('http://localhost:4000/questions')
     .then(r => r.json())
+    .then(randomizer)
     .then(setQuestions)
   }, []);
 
