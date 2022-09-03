@@ -19,6 +19,11 @@ function App() {
     return randomizedArray
   };
 
+  function randomizeAndSetQs(){
+    const randomizedQs = randomizer(questions);
+    setQuestions(randomizedQs)
+  };
+
   useEffect(()=>{
     fetch('http://localhost:4000/questions')
     .then(r => r.json())
@@ -28,15 +33,15 @@ function App() {
 
   return (
     <div>
-      <NavBar />
+      <NavBar onGameClick={randomizeAndSetQs} />
       <h1> Movie Trivia Game </h1>
       <Route exact path='/'>
         <h2>Test Your Knowledge!</h2>
         <p>Welcome to the game! You will get a number of multiple choice trivia questions covering a variety of movies. You get 30 seconds to answer each question. The quicker you answer, the more points you get! The highest scores will make it onto the leaderboard. Whenver your ready, hit the start button below. Good Luck!</p>
-        <Link to='/game'><button>START</button></Link>
+        <Link to='/game'><button onClick={randomizeAndSetQs}>START</button></Link>
       </Route>
       <Route path='/game'>
-        <Game questions={questions} />
+        <Game questions={questions} onRestartClick={randomizeAndSetQs}  />
       </Route>
       <Route path='/leaderboard'>
         <h2>Hall of Fame</h2>

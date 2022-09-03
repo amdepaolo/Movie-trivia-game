@@ -4,7 +4,7 @@ import Timer from "./Timer";
 import Score from "./Score";
 import GameEnd from "./GameEnd";
 
-function Game({questions}){
+function Game({questions, onRestartClick}){
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [time, setTime] = useState(30);
     const [score, setScore] = useState(0);
@@ -25,6 +25,7 @@ function Game({questions}){
         setCurrentQuestion(0);
         setTime(30);
         setScore(0);
+        onRestartClick();
     }
 
     if(time < 0) handleNextQ();

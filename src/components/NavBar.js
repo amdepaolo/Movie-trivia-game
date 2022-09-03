@@ -1,13 +1,13 @@
 import React from "react";
 import {NavLink} from "react-router-dom";   
 
-function NavBar(){
+function NavBar({onGameClick}){
     return(
         <div id="navBar">
             <NavLink to='/' exact>
                 Home
             </NavLink>
-            <NavLink to='/game'>
+            <NavLink onClick={onGameClick} to='/game'>
                 Game
             </NavLink>
             <NavLink to='/leaderboard'>
