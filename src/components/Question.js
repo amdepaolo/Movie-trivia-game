@@ -1,7 +1,7 @@
 import React from "react";
 
 function Question({question, handleAnswered, handleCorrect}) {
-    const {questionText, correct, answers} = question;
+    const {questionText, correct, shuffledAnswers} = question;
 
     function handleClick(selectedAnswer){
         if(selectedAnswer.target.value === correct){
@@ -16,11 +16,11 @@ function Question({question, handleAnswered, handleCorrect}) {
     return(
         <div>
             <h3>{questionText}</h3>
-            <button onClick={handleClick} value={1}>{answers[1]}</button>
-            <button onClick={handleClick} value={2}>{answers[2]}</button>
+            <button onClick={handleClick} value={shuffledAnswers[0].value}>{shuffledAnswers[0].text}</button>
+            <button onClick={handleClick} value={shuffledAnswers[1].value}>{shuffledAnswers[1].text}</button>
             <br/>
-            <button onClick={handleClick} value={3}>{answers[3]}</button>
-            <button onClick={handleClick} value={4}>{answers[4]}</button>
+            <button onClick={handleClick} value={shuffledAnswers[2].value}>{shuffledAnswers[2].text}</button>
+            <button onClick={handleClick} value={shuffledAnswers[3].value}>{shuffledAnswers[3].text}</button>
         </div>
     )
 }

@@ -15,12 +15,18 @@ function App() {
       randomizedArray.splice(Math.round(Math.random()*1000)%randomizedArray.length, 0, array[i]);
       randomizedArray.reverse();
     }
-    console.log(randomizedArray)
     return randomizedArray
   };
 
   function randomizeAndSetQs(){
-    const randomizedQs = randomizer(questions);
+    const randomizedAnswers = questions.map(question =>{
+      const answersArray = [];
+      for (const key in question.answers) {
+        answersArray.push({text: question.answers[key], value: key});
+        }
+      return ({...question, shuffledAnswers: randomizer(answersArray)})
+    });
+    const randomizedQs = randomizer(randomizedAnswers);  
     setQuestions(randomizedQs)
   };
 
